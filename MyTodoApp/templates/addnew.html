@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Task</title>
+</head>
+<body>
+    <h1>My TODO APP</h1>
+    <h2>Add New Task</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">Title</label><br>
+        <input type="text" name="title"><br><br>
+        <label for="">Description</label><br>
+        <textarea name="Desc" id="" cols="30" rows="10"></textarea><br><br>
+        <label for="">Deadline</label><br>
+        <input type="date" name="time"><br><br>
+        <label for="">Status</label><br><br>
+        <input type="text" name="status"><br><br>
+        <input type="submit" >
+    </form>
+    
+</body>
+</html>

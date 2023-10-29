@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodAppHome</title>
+</head>
+<body>
+    <h1 style="text-align: center;">My TODO APP</h1>
+    <Table border="1" style="border-radius: 5px;background-color: aqua;">
+        <tr style="background-color: blue;">
+            <Th>S.No</Th>
+            <Th>Title</Th>
+            <Th>Description</Th>
+            <Th>Deadline</Th>
+            <Th>Status</Th>
+            <Th>Actions</Th>
+        </tr>
+        
+        {% for i in tgs %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.title }}</td>
+            <td>{{ i.Desc }}</td>
+            <td>{{ i.time }}</td>
+            <td>{{ i.status}}</td>
+            <td>
+                <a href="delete/{{i.id}}"><BUtton>Completed</BUtton></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </Table><br>
+    <button style="padding-top: 3px;padding-bottom: 3px;"><a href="/task">Add New</a></button>
+</body>
+</html>
